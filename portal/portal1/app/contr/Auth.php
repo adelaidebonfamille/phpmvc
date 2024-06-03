@@ -29,10 +29,9 @@ class Auth extends Controller
                         $_SESSION['user']['dosen_pembimbing_akademik'] = $loginModel->getDPA($nim);
                         $_SESSION['user']['nama'] = $loginModel->getNamaByNIM($nim);
         
-                        // Arahkan pengguna ke halaman tujuan jika ada, jika tidak, arahkan ke dashboard
                         if (isset($_SESSION['redirect'])) {
                             $redirect = $_SESSION['redirect'];
-                            unset($_SESSION['redirect']); // Hapus session redirect setelah digunakan
+                            unset($_SESSION['redirect']);
                             header("Location: $redirect");
                         } else {
                             header("Location: " . BASEURL . "/dashboard/index");
