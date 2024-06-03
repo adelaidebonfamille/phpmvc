@@ -13,7 +13,7 @@ class Auth extends Controller
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $nim = $_POST["nim"];
             $password = $_POST["password"];
-            $id_jurusan = $_POST['id_jurusan']; // Ambil id_jurusan dari POST data
+            $id_jurusan = $_POST['id_jurusan']; 
         
             $loginModel = $this->model('UserModel');
         
